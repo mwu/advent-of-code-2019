@@ -1,0 +1,10 @@
+name: advent-of-code2019
+version: 0.1.0.0
+author: Myron Wu
+maintainer: Myron Wu <myronwu@gmail.com>
+
+executables:
+  day-1:
+    main: day-1.hs
+    dependencies: [ base ]
+    source-dirs: src
