@@ -28,3 +28,6 @@ executables:
   day-3:
     main: day-3.hs
     source-dirs: src
+  day-4:
+    main: day-4.hs
+    source-dirs: src
