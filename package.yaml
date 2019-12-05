@@ -3,8 +3,28 @@ version: 0.1.0.0
 author: Myron Wu
 maintainer: Myron Wu <myronwu@gmail.com>
 
+dependencies:
+  - base
+  - containers
+  - relude
+  - text
+
+default-extensions:
+  - NoImplicitPrelude
+  - OverloadedStrings
+  - ScopedTypeVariables
+
+ghc-options:
+  - -Wall
+
 executables:
   day-1:
     main: day-1.hs
-    dependencies: [ base ]
+    source-dirs: src
+  day-2:
+    main: day-2.hs
+    dependencies: [ vector ]
+    source-dirs: src
+  day-3:
+    main: day-3.hs
     source-dirs: src
