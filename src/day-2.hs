@@ -2,7 +2,7 @@ module Main where
 
 import Prelude
 import Data.List (find)
-import Data.Vector ((!), (//), Vector, fromList)
+import Data.Vector ((!), (//), Vector)
 
 
 main :: IO ()
@@ -41,10 +41,10 @@ start noun verb p = p // [(1, noun), (2, verb)]
 
 
 run :: Program -> Program
-run p = snd $ head $ dropWhile running $ iterate step init
+run p = snd $ head $ dropWhile running $ iterate step initial
   where
-    init = (Position 0, p)
-    running (p, _) = p /= End
+    initial = (Position 0, p)
+    running (p', _) = p' /= End
 
 
 step :: ProgramState -> ProgramState
@@ -55,7 +55,7 @@ step (Position pc, v) =
     2 -> (Position (pc+4), v // [(v ! (pc+3), (deref (pc+1) v) * (deref (pc+2) v))])
     _ -> (End, v)
   where
-    deref pos v = v ! (v ! pos)
+    deref pos v' = v' ! (v' ! pos)
 
 
 type Program = Vector Int

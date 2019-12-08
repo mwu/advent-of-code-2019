@@ -6,8 +6,10 @@ maintainer: Myron Wu <myronwu@gmail.com>
 dependencies:
   - base
   - containers
+  - monad-loops
   - relude
   - text
+  - vector
 
 default-extensions:
   - NoImplicitPrelude
@@ -23,11 +25,13 @@ executables:
     source-dirs: src
   day-2:
     main: day-2.hs
-    dependencies: [ vector ]
     source-dirs: src
   day-3:
     main: day-3.hs
     source-dirs: src
   day-4:
     main: day-4.hs
+    source-dirs: src
+  day-5:
+    main: day-5.hs
     source-dirs: src
