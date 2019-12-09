@@ -12,6 +12,8 @@ dependencies:
   - vector
 
 default-extensions:
+  - GeneralizedNewtypeDeriving
+  - MultiWayIf
   - NoImplicitPrelude
   - OverloadedStrings
   - ScopedTypeVariables
@@ -35,3 +37,7 @@ executables:
   day-5:
     main: day-5.hs
     source-dirs: src
+  day-6:
+    main: day-6.hs
+    source-dirs: src
+    dependencies: [ fgl ]
