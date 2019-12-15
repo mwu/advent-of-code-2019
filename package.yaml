@@ -5,6 +5,7 @@ maintainer: Myron Wu <myronwu@gmail.com>
 
 dependencies:
   - base
+  - async
   - containers
   - monad-loops
   - relude
@@ -41,3 +42,6 @@ executables:
     main: day-6.hs
     source-dirs: src
     dependencies: [ fgl ]
+  day-7:
+    main: day-7.hs
+    source-dirs: src
