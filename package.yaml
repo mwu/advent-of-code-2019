@@ -9,6 +9,7 @@ dependencies:
   - containers
   - monad-loops
   - relude
+  - split
   - text
   - vector
 
@@ -44,4 +45,10 @@ executables:
     dependencies: [ fgl ]
   day-7:
     main: day-7.hs
+    source-dirs: src
+  day-8:
+    main: day-8.hs
+    source-dirs: src
+  day-9:
+    main: day-9.hs
     source-dirs: src
